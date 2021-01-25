@@ -9,17 +9,62 @@
 </head>
 
 <body>
+
+<div id="container">
+    <h1>my list</h1>
+    <ul id="mylist">
+        <li id="first" class="item">lorem3</li>
+        <li class="item">lorem3</li>
+        <li class="item">lorem3</li>
+        <li class="item">lorem3</li>
+        <li class="item">lorem3</li>
+    </ul>
+</div>
+<button id="addNew">mybutton</button>
+<script>
+    
+    var items = document.getElementsByTagName('li');
+    for (let i = 0; i < items.length; i++){
+        const item =items[i];
+        item.addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+    }
+
+    document.getElementById('addNew').addEventListener('click', function(event){
+        var itemParent = document.getElementById('mylist')
+        var newParent = document.createElement('li');
+        newItem.innerText = 'Brand shoman';
+        itemParent.appendChild(newItem);
+    })
+
+    // document.getElementById('first').addEventListener('click', function(event){
+    //     console.log('first item click');
+        
+    // })
+    // document.getElementById('mylist').addEventListener('click', function(event){
+    //     console.log('mylist click');
+    //     event.stopPropagation()
+    // }
+    // document.getElementById('container').addEventListener('click', function(event){
+    //     console.log('container clicked');
+    // })
+</script>
+
+
+
+
 <!-- <h1 onclick="bottonClick()">Hello-Bootstrap</h1> -->
 
-<h1>amar sunar bangla, ami tumai valobashi.</h1>
+<!-- <h1>amar sunar bangla, ami tumai valobashi.</h1>
 <button >click me 1</button>
 <button id="secondbutton">click me 2</button>
 <button>click me 3</button>
 <button id="lastbutton">click me 4</button>
 p*3>lorem40
-<script>
+<script> -->
     
-//========add evenlistener button style-1=====
+<!-- //========add evenlistener button style-1=====
     // function buttonclick(){
     //     document.body.style.background ='yellow';
     // }
@@ -39,8 +84,8 @@ p*3>lorem40
 //========add evenlistener button style-3=====
     // document.getElementById('lastbutton').addEventListener('click', function(){
     //     document.body.style.color ='tomato';
-    // })
-</script>
+    // }) -->
+<!-- </script> -->
 
 </body>
 </html>
